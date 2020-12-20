@@ -27,7 +27,7 @@ switch(action.type){
             features: [...state.car.features,action.payload]
         },
         store: state.store.filter(addOn => addOn.id !== action.payload.id),
-        additionaPrice: (state.additionalPrice += action.payload.price)
+        additionaPrice: (state.additionalPrice + action.payload.price)
     }
 
     case REMOVE_FEATURE:
@@ -38,7 +38,7 @@ switch(action.type){
                     features: state.car.features.filter(addOn => addOn.id !== action.payload.id)
                 },
                 store: [...state.store, action.payload],
-                additionalPrice: (state.additionalPrice -= action.payload.price),
+                additionalPrice: (state.additionalPrice - action.payload.price),
                 
             }
 
