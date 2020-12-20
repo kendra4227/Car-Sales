@@ -1,28 +1,20 @@
-const ADD_FEATURE = 'ADD_FEATURE'
+//ACTION TYPES
+export const ADD_FEATURE = 'ADD_FEATURE'
+export const REMOVE_FEATURE = 'REMOVE_FEATURE'
 
-function addFeature(){
+// ACTION CREATOR
+export const addFeature = feature => {
     return{
         type:'ADD_FEATURE',
-    info:'First redux action' 
+    payload:feature
     }
 }
 
-const REMOVE_FEATURE = 'REMOVE_FEATURE'
-
-function removeFeature(){
+export const removeFeature = feature => {
     return{
         type:'REMOVE_FEATURE',
-        info:'2nd redux action'
-        
+    payload:feature
     }
 }
 
-const UPDATE_TOTAL = 'UPDATE_TOTAL'
-
-function updateTotal() {
-    return {
-        type:'UPDATE_TOTAL',
-        info:'3rd redux action'
-    }
-}
 
