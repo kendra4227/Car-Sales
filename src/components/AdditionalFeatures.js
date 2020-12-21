@@ -1,8 +1,9 @@
 import React from 'react';
-import AdditionalFeature from './AdditionalFeature';
+import AdditionalFeature from './FeatureAdded';
 import { connect } from "react-redux";
 
 const AdditionalFeatures = props => {
+  console.log(props.additionalFeatures)
   return (
     <div className="content">
     <h4>Additional Features</h4>
